@@ -11,10 +11,6 @@ public abstract class Usuario {
 		this.nombreReal= nombreReal;
 	}
 
-	public Usuario() {
-		super();
-	}
-
 	public String getNombre() {
 		return this.nombre;
 	}
