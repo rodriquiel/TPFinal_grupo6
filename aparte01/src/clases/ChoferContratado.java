@@ -9,12 +9,7 @@ public class ChoferContratado extends Chofer {
 	}
 
 	@Override
-	public double getSueldoBruto() {
-		return this.GananciaViaje;
-	}
-
-	@Override
-	public double getSueldoNeto() {
+	public double calculaSueldo() {
 		return this.GananciaViaje;
 	}
 

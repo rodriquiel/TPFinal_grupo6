@@ -12,16 +12,19 @@ public class ChoferTemporario extends Chofer {
 		CantViajes = cantViajes;
 	}
 
-	@Override
 	public double getSueldoBruto() {
 		if (this.CantViajes > 40)
 			return this.SueldoBasico*1.1;
 		return this.SueldoBasico;
 	}
-
-	@Override
+	
 	public double getSueldoNeto() {
 		return this.getSueldoBruto()*(1-this.Aportes/100.0);
 	}
-
+    
+	@Override
+	public double calculaSueldo()
+	{
+		return this.getSueldoNeto();
+	}
 }

@@ -1,21 +1,25 @@
 package clases;
 
 public abstract class Usuario {
-	private String Nombre;  // no se puede repetir un nombre de usuario
-	private String Contrasena;
-	private String NombreReal;
+	protected String nombre;  // no se puede repetir un nombre de usuario
+	protected String contrasena;
+	protected String nombreReal;
 	
 	public Usuario(String nombre, String contrasena, String nombreReal) {
-		Nombre = nombre;
-		Contrasena = contrasena;
-		NombreReal = nombreReal;
+		this.nombre = nombre;
+		this.contrasena = contrasena;
+		this.nombreReal= nombreReal;
+	}
+
+	public Usuario() {
+		super();
 	}
 
 	public String getNombre() {
-		return Nombre;
+		return this.nombre;
 	}
 	public String getNombreReal() {
-		return NombreReal;
+		return this.nombreReal;
 	}
 
 	

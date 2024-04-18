@@ -16,6 +16,5 @@ public abstract class Chofer {
 		return Nombre;
 	}
 	
-	public abstract double getSueldoBruto();
-	public abstract double getSueldoNeto();
+	public abstract double calculaSueldo();
 }
