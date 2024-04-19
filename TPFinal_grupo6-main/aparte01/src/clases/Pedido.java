@@ -40,7 +40,7 @@ public class Pedido {
 	public int getDistancia() {
 		return this.distancia;
 	}
-	public double ObtieneCosto() {
+	public double ObtieneCosto() throws MiExcepcion {
 		
 		double ValorBase = 1000.0;
 		//preguntar si el valor base es la bajada de bandera o si el viaje arranca en 0
@@ -57,8 +57,8 @@ public class Pedido {
 			aux += ValorBase*0.1*this.getCantidadPasajeros();
 			aux += ValorBase*0.2*this.getDistancia();
 		}
-		else {
-			//throw exception;
+		else{
+			throw new MiExcepcion("La zona '" + this.getZona() + "' no está definida.");
 		}
 		
 		if(this.isMascotas()) {
