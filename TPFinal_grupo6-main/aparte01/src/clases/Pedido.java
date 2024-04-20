@@ -40,11 +40,10 @@ public class Pedido {
 	public int getDistancia() {
 		return this.distancia;
 	}
-	public double ObtieneCosto() throws MiExcepcion {
-		
+	public double ObtieneCosto() throws MiExcepcion {		
 		double ValorBase = 1000.0;
-		//preguntar si el valor base es la bajada de bandera o si el viaje arranca en 0
-		double aux=0.0;
+		double aux=1000.0;
+		
 		if(this.getZona().equalsIgnoreCase("Estandar")) {
 			aux += ValorBase*0.1*this.getCantidadPasajeros();
 			aux += ValorBase*0.1*this.getDistancia();
@@ -70,9 +69,7 @@ public class Pedido {
 			aux += ValorBase*0.1*this.getCantidadPasajeros();
 			aux += ValorBase*0.05*this.getDistancia();
 		}
-		
-		return aux;
-		
+		return aux;		
 	}
 	
 }

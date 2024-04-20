@@ -5,12 +5,13 @@ import java.util.Queue;
 
 public class Administrador extends Usuario{
 
-	private Queue<Chofer> colaChofer ;
-	private ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+	private ColaChofer colaChofer;
+	private ColaVehiculos colaVehiculos;
 	
 	public Administrador(String nombre, String contrasena, String nombreReal) {  //crear clase sistema y hacerla singleton
 			super(nombre,contrasena,nombreReal);
-		
+			this.colaChofer = ColaChofer();
+			this.colaVehiculos = ColaVehiculos();
 	}
   
 
